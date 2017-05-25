@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>中奖记录</title>
+	<link rel="stylesheet" href="css/lottery.css">
+	<style>
+		table{
+			margin: 0 auto;
+			border-collapse: collapse;
+			width: 80%;
+		}
+		table td,table th{
+			border: 1px solid #ccc;
+			width: 10%;
+			white-space: nowrap;
+			padding: 10px;
+			padding-left: 5px;
+		}
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>id</th>
+			<th>eMsg</th>
+			<th>msg</th>
+			<th>typeAward</th>
+			<th>round</th>
+			<th>name</th>
+			<th>awardName</th>
+			<th>price</th>
+		</tr>
+	</table>
+	<script src="js/zepoto.min.js"></script>
+	<script>
+		$.ajax({
+			'url': '/getAwardPersonAll',
+			'type': 'POST',
+			'dataType': 'json',
+			success: function(data){
+				// alert(JSON.stringify(data));
+				var html = "";
+					html += '<tr><th>id</th><th>英文名</th><th>中文名</th><th>中奖类型</th><th>第几轮</th><th>类型名</th><th>奖品名</th><th>奖品的价格</th></tr>';
+				for(var i=0;i<data.length;i++){
+					html += '<tr><td>'+data[i].id+'</td><td>'+data[i].eMsg+'</td><td>'+data[i].msg+'</td><td>'+data[i].typeAward+'</td><td>'+data[i].round+'</td><td>'+data[i].name+'</td><td>'+data[i].awardName+'</td><td>'+data[i].price+'</td></tr>'
+				}
+				$('table').html(html);
+			}
+		})
+	</script>
+</body>
+</html>

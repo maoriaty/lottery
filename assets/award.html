@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>抽奖(award)</title>
+	<link rel="stylesheet" href="css/lottery.css">
+	<style>
+		.author{
+			position: absolute;
+			bottom: 10%;left: 2%;
+			background-color: rgba(0,0,0,.5);
+			color: #fff;
+			font-size: 1.5em;
+		}
+	</style>
+</head>
+<body>
+	<img src="img/bg2.jpg" alt="">
+	<div class="selectBox">
+		<a id="luckyAward" class="luckyAwardHidden">幸运奖抽奖</a>
+		<a id="rankAward">等级抽奖</a>
+		<div>
+			<a class="setBtn">设置</a>
+			<div class="setBox hidden">
+				<!-- <p style="margin-bottom: 10px;">设置每次中奖人数和中奖总人数</p> -->
+				<p class="awardName luckyAwardHidden" id="luckyAwardSet">幸运奖</p>
+				<div class="setNumBox luckyAwardHidden">
+					<span>每次中奖的人数：</span>
+					<input type="text" class="luckyTimesNum">
+				</div>
+				<div class="setNumBox luckyAwardHidden">
+					<span>本奖中奖总人数：</span>
+					<input type="text" class="luckyTotalNum">
+				</div>
+				<button class="luckyAwardHidden" id="luckySetCommit">确定</button>
+				<p class="awardName" id="rankAwardSet">等级奖设置</p>
+				<div class="setNumBox">
+					<span>每次中奖的人数：</span>
+					<input type="text" class="rankTimesNum">
+				</div>
+				<div class="setNumBox">
+					<span>本奖中奖总人数：</span>
+					<input type="text" class="rankTotalNum">
+				</div>
+				<button id="rankSetCommit">确定</button>
+				<div class="setNumBox">
+					<span>中奖人框显示的宽度：</span>
+					<input type="text" class="personWidth">
+				</div>
+				<button id="setPersonWidth">确定</button>
+				<p id="resetAll">重置</p>
+			</div>
+		</div>
+	</div>
+	<div class="awardPic">
+		<img src="img/IT-lizhaobing.jpg" alt="">
+		<p><span>奖品：</span><span class="awardPicTil"></span></p>
+	</div>
+	<div class="awardBox">
+		<p class="awardActive">抽奖类型</p>
+		<div class="msBox">
+			
+		</div>
+		<div class="btnBox">
+			<a id="lottery">开始抽奖</a>
+			<a id="lookAward">查看中奖名单</a>
+			<a href="awardMsg.html" target="_blank">所有中奖人名单</a>
+		</div>
+	</div>
+	<div class="showAwardBox hidden">
+		<span class="close">X</span>
+		<p class="title"><span id="showRound"></span><span id="showAwardName"></span>中奖名单</p>
+		<div class="showAward"></div>
+	</div>
+	<div class="author">19周年庆抽奖活动-IT部制作</div>
+	<script src="js/zepoto.min.js"></script>
+	<script src="js/lottery.js"></script>
+</body>
+</html>

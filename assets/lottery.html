@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>抽奖(lottery)</title>
+	<link rel="stylesheet" href="css/lottery.css">
+	<style>
+		.author{
+			position: absolute;
+			bottom: 25%;right: 15%;
+			background-color: rgba(0,0,0,.5);
+			color: #fff;
+			font-size: 1.5em;
+		}
+		.logoNewPic{
+			position: absolute;
+			left: 20px;top: 20px;
+			width: 10%;
+		}
+		.leftPic{
+			position: absolute;
+			left: 15%;top: 18%;
+			width: 20%;
+		}
+		.rightPic{
+			position: absolute;
+			right: 15%;top: 18%;
+			width: 20%;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img src="img/logoNew.png" alt="" class="logoNewPic">
+		<img src="img/left.png" alt="" class="leftPic">
+		<img src="img/right.png" alt="" class="rightPic">
+		<img src="img/bg.jpg" alt="">
+	</div>
+	<div class="lotteryBox">
+		<div class="roundBox firstRound noselect">
+			<a href="/firstRound">第一轮</a>
+			<a href="##" class="luckyAward">幸运奖</a>
+			<a href="##" class="rankBox thirdAward">三等奖</a>
+		</div>
+		<div class="roundBox secondRound noselect">
+			<a href="/secondRound">第二轮</a>
+			<a href="##" class="luckyAward">幸运奖</a>
+			<a href="##" class="rankBox secondAward">二等奖</a>
+		</div>
+		<div class="roundBox thirdRound noselect">
+			<a href="/thirdRound">第三轮</a>
+			<a href="##" class="luckyAward">幸运奖</a>
+			<a href="##" class="rankBox firstAward">一等奖</a>
+		</div>
+		<div class="roundBox fourthRound noselect">
+			<a href="/fourthRound">第四轮</a>
+			<a href="##" class="specialAward">特等奖</a>
+		</div>
+	</div>
+	
+	<div class="awardShow"></div>
+	<div class="author">19周年庆抽奖活动-IT部制作</div>
+	<script src="js/award.js"></script>
+</body>
+</html>
